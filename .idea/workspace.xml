@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b474603-9809-41e2-a42c-e958bec3f857" name="Changes" comment="Hechas las modificaciones de documentos">
-      <change afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alumnos.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cursos.csv" afterDir="false" />
+    <list default="true" id="2b474603-9809-41e2-a42c-e958bec3f857" name="Changes" comment="Quitada la bd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conexion.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +21,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
     <option name="UPDATE_TYPE" value="REBASE" />
@@ -54,9 +54,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.main.executor": "Run",
+    "Python.main_2.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "actual",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/Admin/PycharmProjects/practica_forga",
     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.CSV/TSV/PSV"
@@ -102,11 +103,20 @@
       <option name="project" value="LOCAL" />
       <updated>1726833135122</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Quitada la bd">
+      <option name="closed" value="true" />
+      <created>1727163439593</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1727163439594</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hechas las modificaciones de documentos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hechas las modificaciones de documentos" />
+    <MESSAGE value="Quitada la bd" />
+    <option name="LAST_COMMIT_MESSAGE" value="Quitada la bd" />
   </component>
 </project>
