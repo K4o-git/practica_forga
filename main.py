@@ -36,6 +36,8 @@ class win(tk.Tk):
         self.frame.grid(row=1, column=0, sticky="nswe")
         self.sheet.grid(row=1, column=0, sticky="nswe")
 
+
+        #CAMPOS DE TEXTO PARA LOS DATOS DEL CURSO
         self.frame2 = tk.Frame(self)
         self.frame2.grid_columnconfigure(2, weight=0)
         self.frame2.grid(row=0, column=0, sticky="nswe", padx=30, pady=10)
@@ -62,6 +64,8 @@ class win(tk.Tk):
 
         titulo_tabla = Label(self.frame2, text="LISTADO DE ALUMNOS", font=('bold', 12, 'underline')).grid(row=4, column=3)
 
+
+        #BOTONES DE SELECCIÓN DE DOCUMENTOS
         self.frame3 = tk.Frame(self.frame2)
         self.frame3.grid(row=0, column=4, padx=10, sticky="nswe", rowspan=4)
 

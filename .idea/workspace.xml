@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b474603-9809-41e2-a42c-e958bec3f857" name="Changes" comment="Quitada la bd">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2b474603-9809-41e2-a42c-e958bec3f857" name="Changes" comment="1º interfaz con tksheet">
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,12 +110,29 @@
       <option name="project" value="LOCAL" />
       <updated>1727163439594</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1º interfaz con tksheet">
+      <option name="closed" value="true" />
+      <created>1727262467784</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1727262467784</updated>
+    </task>
+    <task id="LOCAL-00005" summary="1º interfaz con tksheet">
+      <option name="closed" value="true" />
+      <created>1727262597249</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1727262597249</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hechas las modificaciones de documentos" />
     <MESSAGE value="Quitada la bd" />
-    <option name="LAST_COMMIT_MESSAGE" value="Quitada la bd" />
+    <MESSAGE value="1º interfaz con tksheet" />
+    <option name="LAST_COMMIT_MESSAGE" value="1º interfaz con tksheet" />
   </component>
 </project>
