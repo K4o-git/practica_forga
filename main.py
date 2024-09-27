@@ -24,7 +24,7 @@ class win(tk.Tk):
         self.frame = tk.Frame(self)
         self.frame.grid_columnconfigure(0, weight=1)
         self.frame.grid_rowconfigure(0, weight=1)
-        self.sheet = tksheet.Sheet(self, width=980, height=450, total_columns=4, total_rows=15 , show_x_scrollbar=True, show_y_scrollbar=True)
+        self.sheet = tksheet.Sheet(self, width=980, height=450, total_columns=4, total_rows=15 , show_x_scrollbar=False, show_y_scrollbar=True)
         self.sheet.column_width(column=0, width=140)
         self.sheet.column_width(column=1, width=380)
         self.sheet.column_width(column=2, width=380)
@@ -52,7 +52,7 @@ class win(tk.Tk):
 
         et_num_curso = Label(self.frame2, text="Nº do curso")
         et_num_curso.grid(row=0, column=0, padx=10, pady=10)
-        self.num_curso  = Entry(self.frame2, width=42)
+        self.num_curso = Entry(self.frame2, width=42)
         self.num_curso.grid(row=0, column=1, padx=10, pady=10)
 
         et_nom_curso = Label(self.frame2, text="Nome do curso")
@@ -85,7 +85,7 @@ class win(tk.Tk):
         self.check7 = ttk.Checkbutton(self.frame3, text="Modelo autorización datos persoais 2").grid(row=6, sticky="w")
         self.check8 = ttk.Checkbutton(self.frame3, text="Modelo autorización rexistro pegada dixital_gal").grid(row=7, sticky="w")
 
-        botonOK = Button(self, width=20, text="LISTO", command=lambda: self.prueba()).grid(row=2, column=0, sticky="n", rowspan=2)
+        botonOK = Button(self, width=20, text="LISTO", command=lambda: self.prueba_generar_documentos()).grid(row=2, column=0, sticky="n", rowspan=2)
 
         barra_menus = Menu()
         menu = Menu(barra_menus, tearoff=False)
@@ -142,9 +142,9 @@ class win(tk.Tk):
         for row in self.sheet.data:
             try:
                 if (row[0] == "") or (row[3] == None): break
-                nome = row[0]
-                apelidos = row[1]
-                dni = row[2]
+                dni = row[0]
+                nome = row[1]
+                apelidos = row[2]
                 id_curso = self.num_curso.get()
                 nome_curso = self.nom_curso.get()
                 centro = ''
@@ -185,6 +185,7 @@ class win(tk.Tk):
             7:"./plantillas/Plantilla_Modelo autorización datos persoais_2.docx",
             8:"./plantillas/Plantilla_Modelo autorización rexistro pegada dixital_gal.docx"
             }
+
     def prueba(self):
         for row in self.sheet.data:
             print(row)

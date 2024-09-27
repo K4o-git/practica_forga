@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b474603-9809-41e2-a42c-e958bec3f857" name="Changes" comment="1º interfaz con tksheet">
-      <change afterPath="$PROJECT_DIR$/alumnos2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
+    <list default="true" id="2b474603-9809-41e2-a42c-e958bec3f857" name="Changes" comment="Arreglada la tabla, casi todo funcional.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/alumnos.csv" beforeDir="false" afterPath="$PROJECT_DIR$/alumnos.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
@@ -155,13 +153,22 @@
       <option name="project" value="LOCAL" />
       <updated>1727351794992</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Arreglada la tabla, casi todo funcional.">
+      <option name="closed" value="true" />
+      <created>1727470526754</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1727470526754</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hechas las modificaciones de documentos" />
     <MESSAGE value="Quitada la bd" />
     <MESSAGE value="1º interfaz con tksheet" />
-    <option name="LAST_COMMIT_MESSAGE" value="1º interfaz con tksheet" />
+    <MESSAGE value="Arreglada la tabla, casi todo funcional." />
+    <option name="LAST_COMMIT_MESSAGE" value="Arreglada la tabla, casi todo funcional." />
   </component>
 </project>
