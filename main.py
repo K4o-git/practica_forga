@@ -1,5 +1,6 @@
 import csv
 import os
+import shutil
 import sys
 import io
 from pathlib import Path
@@ -76,16 +77,24 @@ class win(tk.Tk):
         self.frame3 = tk.Frame(self.frame2)
         self.frame3.grid(row=0, column=4, padx=10, sticky="nswe", rowspan=4)
 
-        self.check1 = ttk.Checkbutton(self.frame3, text="Ficha de alumno").grid(row=0, sticky="w")
-        self.check2 = ttk.Checkbutton(self.frame3, text="Dereitos e deberes").grid(row=1, sticky="w")
-        self.check3 = ttk.Checkbutton(self.frame3, text="Protección de datos").grid(row=2, sticky="w")
-        self.check4 = ttk.Checkbutton(self.frame3, text="Rexistro pegada dixital").grid(row=3, sticky="w")
-        self.check5 = ttk.Checkbutton(self.frame3, text="Información bolsas").grid(row=4, sticky="w")
-        self.check6 = ttk.Checkbutton(self.frame3, text="Modelo autorización datos persoais").grid(row=5, sticky="w")
-        self.check7 = ttk.Checkbutton(self.frame3, text="Modelo autorización datos persoais 2").grid(row=6, sticky="w")
-        self.check8 = ttk.Checkbutton(self.frame3, text="Modelo autorización rexistro pegada dixital_gal").grid(row=7, sticky="w")
+        self.c1 = tk.IntVar()
+        self.c2 = tk.IntVar()
+        self.c3 = tk.IntVar()
+        self.c4 = tk.IntVar()
+        self.c5 = tk.IntVar()
+        self.c6 = tk.IntVar()
+        self.c7 = tk.IntVar()
+        self.c8 = tk.IntVar()
+        self.check1 = ttk.Checkbutton(self.frame3, variable=self.c1, text="Ficha de alumno").grid(row=0, sticky="w")
+        self.check2 = ttk.Checkbutton(self.frame3, variable=self.c2, text="Dereitos e deberes").grid(row=1, sticky="w")
+        self.check3 = ttk.Checkbutton(self.frame3, variable=self.c3, text="Protección de datos").grid(row=2, sticky="w")
+        self.check4 = ttk.Checkbutton(self.frame3, variable=self.c4, text="Rexistro pegada dixital").grid(row=3, sticky="w")
+        self.check5 = ttk.Checkbutton(self.frame3, variable=self.c5, text="Información bolsas").grid(row=4, sticky="w")
+        self.check6 = ttk.Checkbutton(self.frame3, variable=self.c6, text="Modelo autorización datos persoais").grid(row=5, sticky="w")
+        self.check7 = ttk.Checkbutton(self.frame3, variable=self.c7, text="Modelo autorización datos persoais 2").grid(row=6, sticky="w")
+        self.check8 = ttk.Checkbutton(self.frame3, variable=self.c8, text="Modelo autorización rexistro pegada dixital_gal").grid(row=7, sticky="w")
 
-        botonOK = Button(self, width=20, text="LISTO", command=lambda: self.prueba_generar_documentos()).grid(row=2, column=0, sticky="n", rowspan=2)
+        botonOK = Button(self, width=20, text="LISTO", command=lambda: self.prueba_impresion()).grid(row=2, column=0, sticky="n", rowspan=2)
 
         barra_menus = Menu()
         menu = Menu(barra_menus, tearoff=False)
@@ -141,7 +150,7 @@ class win(tk.Tk):
     def prueba_generar_documentos(self):
         for row in self.sheet.data:
             try:
-                if (row[0] == "") or (row[3] == None): break
+                if (row[0] == "") or (row[3] == False): continue
                 dni = row[0]
                 nome = row[1]
                 apelidos = row[2]
@@ -160,7 +169,7 @@ class win(tk.Tk):
                     "CENSO": censo
                 }
                 # Crea las subcarpetas para cada alumno y cuarda dentro sus documentos modificados
-                os.makedirs(str("generados/" + apelidos + " " + nome))
+                os.makedirs(str("generados/" + apelidos + " " + nome), exist_ok=True)
                 for file in os.listdir("./plantillas"):
                     if file.endswith("docx"):
                         documento_path = Path(__file__).parent / str("plantillas/" + file)
@@ -175,20 +184,25 @@ class win(tk.Tk):
             except Exception as e:
                 print(e)
 
-    #Èsto por ahora no se usa, es parte de una idea para que se impriman sólo los seleccionados con los checkbox.
-    plantillas = {1:"./plantillas/Plantilla_Ficha_alumn_AFD.docx",
-            2:"./plantillas/Plantilla_dereitos-deberes_2.docx",
-            3:"./plantillas/Plantilla_proteccion-datos.docx",
-            4:"./plantillas/Plantilla_rexistro-pegada_2.docx",
-            5:"./plantillas/Plantilla_Informacion-Bolsas.docx",
-            6:"./plantillas/Plantilla_Modelo autorización datos persoais.docx",
-            7:"./plantillas/Plantilla_Modelo autorización datos persoais_2.docx",
-            8:"./plantillas/Plantilla_Modelo autorización rexistro pegada dixital_gal.docx"
-            }
-
-    def prueba(self):
+    def prueba_impresion(self):
+        self.prueba_generar_documentos()
+        docs = []
         for row in self.sheet.data:
-            print(row)
+            nome = row[1]
+            apelidos = row[2]
+            if (row[0] == "") or (row[3] == False): continue
+            if (self.c1.get() == 1): docs.append(str("generados/" + apelidos + " " + nome) + "/Plantilla_Ficha_alumn_AFD.docx")
+            if (self.c2.get() == 1): docs.append(str("generados/" + apelidos + " " + nome) + "/Plantilla_dereitos-deberes_2.docx")
+            if (self.c3.get() == 1): docs.append(str("generados/" + apelidos + " " + nome) + "/Plantilla_proteccion-datos.docx")
+            if (self.c4.get() == 1): docs.append(str("generados/" + apelidos + " " + nome) + "/Plantilla_rexistro-pegada_2.docx")
+            if (self.c5.get() == 1): docs.append(str("generados/" + apelidos + " " + nome) + "/Plantilla_Informacion-Bolsas.docx")
+            if (self.c6.get() == 1): docs.append(str("generados/" + apelidos + " " + nome) + "/Plantilla_Modelo autorización datos persoais.docx")
+            if (self.c7.get() == 1): docs.append(str("generados/" + apelidos + " " + nome) + "/Plantilla_Modelo autorización datos persoais_2.docx")
+            if (self.c8.get() == 1): docs.append(str("generados/" + apelidos + " " + nome) + "/Plantilla_Modelo autorización rexistro pegada dixital_gal.docx")
+            print(docs)
+            os.makedirs(str("imprimir/" + apelidos + " " + nome), exist_ok=True)
+            for doc in docs:
+                shutil.copy(doc, "imprimir/" + apelidos + " " + nome)
 
 app = win()
 app.mainloop()
