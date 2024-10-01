@@ -25,10 +25,10 @@ class win(tk.Tk):
         self.frame = tk.Frame(self)
         self.frame.grid_columnconfigure(0, weight=1)
         self.frame.grid_rowconfigure(0, weight=1)
-        self.sheet = tksheet.Sheet(self, width=980, height=450, total_columns=4, total_rows=15 , show_x_scrollbar=False, show_y_scrollbar=True)
+        self.sheet = tksheet.Sheet(self, width=1100, height=450, total_columns=4, total_rows=15 , show_x_scrollbar=False, show_y_scrollbar=True)
         self.sheet.column_width(column=0, width=140)
-        self.sheet.column_width(column=1, width=380)
-        self.sheet.column_width(column=2, width=380)
+        self.sheet.column_width(column=1, width=440)
+        self.sheet.column_width(column=2, width=440)
         self.sheet.column_width(column=3, width=24)
         self.sheet.headers(["DNI", "Nome", "Apelidos", "ok"])
         self.sheet.checkbox("D", checked=False)
@@ -53,22 +53,22 @@ class win(tk.Tk):
 
         et_num_curso = Label(self.frame2, text="Nº do curso")
         et_num_curso.grid(row=0, column=0, padx=10, pady=10)
-        self.num_curso = Entry(self.frame2, width=42)
+        self.num_curso = Entry(self.frame2, width=54)
         self.num_curso.grid(row=0, column=1, padx=10, pady=10)
 
         et_nom_curso = Label(self.frame2, text="Nome do curso")
         et_nom_curso.grid(row=1, column=0, padx=10, pady=10)
-        self.nom_curso = Entry(self.frame2, width=42)
+        self.nom_curso = Entry(self.frame2, width=54)
         self.nom_curso.grid(row=1, column=1, padx=10, pady=10)
 
         et_censo = Label(self.frame2, text="Nº Censo")
         et_censo.grid(row=2, column=0, padx=10, pady=10)
-        self.censo = Entry(self.frame2, width=42)
+        self.censo = Entry(self.frame2, width=54)
         self.censo.grid(row=2, column=1, padx=10, pady=10)
 
         et_centro = Label(self.frame2, text="Centro")
         et_centro.grid(row=3, column=0, padx=10, pady=10)
-        self.centro = Entry(self.frame2, width=42)
+        self.centro = Entry(self.frame2, width=54)
         self.centro.grid(row=3, column=1, padx=10, pady=10)
 
         titulo_tabla = Label(self.frame2, text="LISTADO DE ALUMNOS", font=('bold', 12, 'underline')).grid(row=4, column=3)
@@ -77,6 +77,7 @@ class win(tk.Tk):
         self.frame3 = tk.Frame(self.frame2)
         self.frame3.grid(row=0, column=4, padx=10, sticky="nswe", rowspan=4)
 
+        self.docCheck = []
         self.c1 = tk.IntVar()
         self.c2 = tk.IntVar()
         self.c3 = tk.IntVar()
@@ -85,16 +86,24 @@ class win(tk.Tk):
         self.c6 = tk.IntVar()
         self.c7 = tk.IntVar()
         self.c8 = tk.IntVar()
+        self.docCheck.append(self.c1)
+        self.docCheck.append(self.c2)
+        self.docCheck.append(self.c3)
+        self.docCheck.append(self.c4)
+        self.docCheck.append(self.c5)
+        self.docCheck.append(self.c6)
+        self.docCheck.append(self.c7)
+        self.docCheck.append(self.c8)
         self.check1 = ttk.Checkbutton(self.frame3, variable=self.c1, text="Ficha de alumno").grid(row=0, sticky="w")
         self.check2 = ttk.Checkbutton(self.frame3, variable=self.c2, text="Dereitos e deberes").grid(row=1, sticky="w")
         self.check3 = ttk.Checkbutton(self.frame3, variable=self.c3, text="Protección de datos").grid(row=2, sticky="w")
         self.check4 = ttk.Checkbutton(self.frame3, variable=self.c4, text="Rexistro pegada dixital").grid(row=3, sticky="w")
         self.check5 = ttk.Checkbutton(self.frame3, variable=self.c5, text="Información bolsas").grid(row=4, sticky="w")
-        self.check6 = ttk.Checkbutton(self.frame3, variable=self.c6, text="Modelo autorización datos persoais").grid(row=5, sticky="w")
-        self.check7 = ttk.Checkbutton(self.frame3, variable=self.c7, text="Modelo autorización datos persoais 2").grid(row=6, sticky="w")
+        self.check6 = ttk.Checkbutton(self.frame3, variable=self.c6, text="Modelo autorización datos persoais - Narón").grid(row=5, sticky="w")
+        self.check7 = ttk.Checkbutton(self.frame3, variable=self.c7, text="Modelo autorización datos persoais - Ames").grid(row=6, sticky="w")
         self.check8 = ttk.Checkbutton(self.frame3, variable=self.c8, text="Modelo autorización rexistro pegada dixital_gal").grid(row=7, sticky="w")
 
-        botonOK = Button(self, width=20, text="LISTO", command=lambda: self.prueba_impresion()).grid(row=2, column=0, sticky="n", rowspan=2)
+        botonOK = Button(self, width=30, height=2, text="LISTO", command=lambda: self.prueba_impresion()).grid(row=2, column=0, sticky="n", rowspan=2, pady=20)
 
         barra_menus = Menu()
         menu = Menu(barra_menus, tearoff=False)
@@ -105,6 +114,16 @@ class win(tk.Tk):
         menu.add_command(label="Cargar datos guardados", command=lambda: self.open_csv())
         menu.add_command(label="Salir", command=lambda: sys.exit())
         self.config(menu=barra_menus)
+        submenu = Menu(menu2, tearoff=False)
+        menu2.add_command(label="Seleccionar todos", command=lambda: {self.marcar()})
+
+    def marcar(self):
+        for ok in self.docCheck:
+            if (ok.get()):
+                ok.set(0)
+            else:
+                ok.set(1)
+            print(ok.get())
 
     #Guarda los datos de la tabla en el estado actual, excepto los valores de la tabla de checkbox.
     def save_sheet(self):
@@ -199,7 +218,6 @@ class win(tk.Tk):
             if (self.c6.get() == 1): docs.append(str("generados/" + apelidos + " " + nome) + "/Plantilla_Modelo autorización datos persoais.docx")
             if (self.c7.get() == 1): docs.append(str("generados/" + apelidos + " " + nome) + "/Plantilla_Modelo autorización datos persoais_2.docx")
             if (self.c8.get() == 1): docs.append(str("generados/" + apelidos + " " + nome) + "/Plantilla_Modelo autorización rexistro pegada dixital_gal.docx")
-            print(docs)
             os.makedirs(str("imprimir/" + apelidos + " " + nome), exist_ok=True)
             for doc in docs:
                 shutil.copy(doc, "imprimir/" + apelidos + " " + nome)
