@@ -49,29 +49,34 @@ class win(tk.Tk):
         #CAMPOS DE TEXTO PARA LOS DATOS DEL CURSO
         self.frame2 = tk.Frame(self)
         self.frame2.grid_columnconfigure(2, weight=0)
-        self.frame2.grid(row=0, column=0, sticky="nswe", padx=30, pady=10)
+        self.frame2.grid(row=0, column=0, sticky="nswe", padx=30, pady=20)
 
         et_num_curso = Label(self.frame2, text="Nº do curso")
-        et_num_curso.grid(row=0, column=0, padx=10, pady=10)
+        et_num_curso.grid(row=0, column=0, padx=10, pady=2)
         self.num_curso = Entry(self.frame2, width=54)
-        self.num_curso.grid(row=0, column=1, padx=10, pady=10)
+        self.num_curso.grid(row=0, column=1, padx=10, pady=2)
+
+        et_cod_curso = Label(self.frame2, text="Cod. especialidade")
+        et_cod_curso.grid(row=1, column=0, padx=10, pady=2)
+        self.cod_curso = Entry(self.frame2, width=54)
+        self.cod_curso.grid(row=1, column=1, padx=10, pady=2)
 
         et_nom_curso = Label(self.frame2, text="Nome do curso")
-        et_nom_curso.grid(row=1, column=0, padx=10, pady=10)
+        et_nom_curso.grid(row=2, column=0, padx=10, pady=2)
         self.nom_curso = Entry(self.frame2, width=54)
-        self.nom_curso.grid(row=1, column=1, padx=10, pady=10)
-
-        et_censo = Label(self.frame2, text="Nº Censo")
-        et_censo.grid(row=2, column=0, padx=10, pady=10)
-        self.censo = Entry(self.frame2, width=54)
-        self.censo.grid(row=2, column=1, padx=10, pady=10)
+        self.nom_curso.grid(row=2, column=1, padx=10, pady=2)
 
         et_centro = Label(self.frame2, text="Centro")
-        et_centro.grid(row=3, column=0, padx=10, pady=10)
+        et_centro.grid(row=3, column=0, padx=10, pady=2)
         self.centro = Entry(self.frame2, width=54)
-        self.centro.grid(row=3, column=1, padx=10, pady=10)
+        self.centro.grid(row=3, column=1, padx=10, pady=2)
 
-        titulo_tabla = Label(self.frame2, text="LISTADO DE ALUMNOS", font=('bold', 12, 'underline')).grid(row=4, column=3)
+        et_censo = Label(self.frame2, text="Nº Censo")
+        et_censo.grid(row=4, column=0, padx=10, pady=2)
+        self.censo = Entry(self.frame2, width=54)
+        self.censo.grid(row=4, column=1, padx=10, pady=2)
+
+        titulo_tabla = Label(self.frame2, text="LISTADO DE ALUMNOS", font=('bold', 12, 'underline')).grid(row=5, column=3)
 
         #BOTONES DE SELECCIÓN DE DOCUMENTOS
         self.frame3 = tk.Frame(self.frame2)
@@ -94,14 +99,14 @@ class win(tk.Tk):
         self.docCheck.append(self.c6)
         self.docCheck.append(self.c7)
         self.docCheck.append(self.c8)
-        self.check1 = ttk.Checkbutton(self.frame3, variable=self.c1, text="Ficha de alumno").grid(row=0, sticky="w")
-        self.check2 = ttk.Checkbutton(self.frame3, variable=self.c2, text="Dereitos e deberes").grid(row=1, sticky="w")
-        self.check3 = ttk.Checkbutton(self.frame3, variable=self.c3, text="Protección de datos").grid(row=2, sticky="w")
-        self.check4 = ttk.Checkbutton(self.frame3, variable=self.c4, text="Rexistro pegada dixital").grid(row=3, sticky="w")
-        self.check5 = ttk.Checkbutton(self.frame3, variable=self.c5, text="Información bolsas").grid(row=4, sticky="w")
-        self.check6 = ttk.Checkbutton(self.frame3, variable=self.c6, text="Modelo autorización datos persoais - Narón").grid(row=5, sticky="w")
-        self.check7 = ttk.Checkbutton(self.frame3, variable=self.c7, text="Modelo autorización datos persoais - Ames").grid(row=6, sticky="w")
-        self.check8 = ttk.Checkbutton(self.frame3, variable=self.c8, text="Modelo autorización rexistro pegada dixital_gal").grid(row=7, sticky="w")
+        self.check1 = ttk.Checkbutton(self.frame3, variable=self.c1, text="Ficha de alumno").grid(row=0, pady=2, sticky="w")
+        self.check2 = ttk.Checkbutton(self.frame3, variable=self.c2, text="Dereitos e deberes").grid(row=1, pady=2, sticky="w")
+        self.check3 = ttk.Checkbutton(self.frame3, variable=self.c3, text="Protección de datos").grid(row=2, pady=2, sticky="w")
+        self.check4 = ttk.Checkbutton(self.frame3, variable=self.c4, text="Rexistro pegada dixital").grid(row=3, pady=2, sticky="w")
+        self.check5 = ttk.Checkbutton(self.frame3, variable=self.c5, text="Información bolsas").grid(row=4, pady=2, sticky="w")
+        self.check6 = ttk.Checkbutton(self.frame3, variable=self.c6, text="Modelo autorización datos persoais - Narón").grid(row=5, pady=2, sticky="w")
+        self.check7 = ttk.Checkbutton(self.frame3, variable=self.c7, text="Modelo autorización datos persoais - Ames").grid(row=6, pady=2, sticky="w")
+        self.check8 = ttk.Checkbutton(self.frame3, variable=self.c8, text="Modelo autorización rexistro pegada dixital_gal").grid(row=7, pady=2, sticky="w")
 
         botonOK = Button(self, width=30, height=2, text="LISTO", command=lambda: self.prueba_impresion()).grid(row=2, column=0, sticky="n", rowspan=2, pady=20)
 

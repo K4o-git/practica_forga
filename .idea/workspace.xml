@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b474603-9809-41e2-a42c-e958bec3f857" name="Changes" comment="Casi terminaDO">
+    <list default="true" id="2b474603-9809-41e2-a42c-e958bec3f857" name="Changes" comment="Casi terminado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -55,6 +55,7 @@
   "keyToString": {
     "Python.main.executor": "Run",
     "Python.main_2.executor": "Run",
+    "Python.main_con_place.executor": "Run",
     "Python.main_malo.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -176,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727685084320</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Casi terminado">
+      <option name="closed" value="true" />
+      <created>1727779848945</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1727779848945</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -185,6 +194,7 @@
     <MESSAGE value="1º interfaz con tksheet" />
     <MESSAGE value="Arreglada la tabla, casi todo funcional." />
     <MESSAGE value="Casi terminaDO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Casi terminaDO" />
+    <MESSAGE value="Casi terminado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Casi terminado" />
   </component>
 </project>
