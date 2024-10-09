@@ -17,6 +17,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\aaa.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\aaa2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\alumnos.csv">
           <value>
             <Attribute>
@@ -38,6 +52,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\bbb.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\cursos.csv">
           <value>
             <Attribute>
@@ -45,7 +66,49 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\pruebas\aaa.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\qqq.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\zzzzzz\AFER1234-00234542_datos _ALUMNOS.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\zzzzzz\AFER1234-00234542_datos _CURSO.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\zzzzzz\AFER1234.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\zzzzzz\curso 1234567.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\zzzzzz\datos curso de proba.csv">
           <value>
             <Attribute>
               <option name="separator" value=";" />

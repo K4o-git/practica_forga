@@ -4,9 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b474603-9809-41e2-a42c-e958bec3f857" name="Changes" comment="Casi terminado">
+    <list default="true" id="2b474603-9809-41e2-a42c-e958bec3f857" name="Changes" comment="GUI Marco ajustada">
+      <change afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pruebas/AFER1234-00234542_datos _ALUMNOS.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pruebas/aaa.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AFER1234-00234542_datos _ALUMNOS.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AFER1234-00234542_datos _CURSO.csv" beforeDir="false" afterPath="$PROJECT_DIR$/pruebas/AFER1234-00234542_datos _CURSO.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AFER1234.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alumnos.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alumnos2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/curso 1234567.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos curso de proba.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_con_place.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelos/Autorización_datos_persoais.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelos/Autorización_pegada_dixital.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelos/Dereitos_e_deberes.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelos/Ficha_de_alumno.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelos/Información_de_bolsas.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modelos/Protección_de_datos.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plantillas/Plantilla_Ficha_alumn_AFD.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plantillas/Plantilla_Informacion-Bolsas.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plantillas/Plantilla_Modelo autorización datos persoais.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plantillas/Plantilla_Modelo autorización datos persoais_2.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plantillas/Plantilla_Modelo autorización rexistro pegada dixital_gal.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plantillas/Plantilla_dereitos-deberes_2.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plantillas/Plantilla_proteccion-datos.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plantillas/Plantilla_rexistro-pegada_2.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +48,22 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="actual" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,13 +93,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.app.executor": "Run",
     "Python.main.executor": "Run",
     "Python.main_2.executor": "Run",
     "Python.main_con_place.executor": "Run",
     "Python.main_malo.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "actual",
+    "git-widget-placeholder": "Version-Marco",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/Admin/PycharmProjects/practica_forga",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
@@ -68,8 +109,11 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\PycharmProjects\practica_forga" />
+      <recent name="C:\Users\Admin\PycharmProjects\practica_forga\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\PycharmProjects\practica_forga\app" />
+      <recent name="C:\Users\Admin\PycharmProjects\practica_forga\pruebas" />
       <recent name="C:\Users\Admin\PycharmProjects\practica_forga" />
     </key>
   </component>
@@ -185,7 +229,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727779848945</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Versión mía">
+      <option name="closed" value="true" />
+      <created>1727952357668</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1727952357668</updated>
+    </task>
+    <task id="LOCAL-00014" summary="GUI Marco ajustada">
+      <option name="closed" value="true" />
+      <created>1727952584414</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1727952584414</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -195,6 +255,8 @@
     <MESSAGE value="Arreglada la tabla, casi todo funcional." />
     <MESSAGE value="Casi terminaDO" />
     <MESSAGE value="Casi terminado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Casi terminado" />
+    <MESSAGE value="Versión mía" />
+    <MESSAGE value="GUI Marco ajustada" />
+    <option name="LAST_COMMIT_MESSAGE" value="GUI Marco ajustada" />
   </component>
 </project>
